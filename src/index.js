@@ -1,12 +1,13 @@
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import onSubmit from './js/onSubmit';
-import onLoad from './js/onLoad';
+import handleSubmit from './js/handleSubmit';
+import handleLoad from './js/handleLoad';
 
 const formEl = document.querySelector('#search-form');
 const loadBtnEl = document.querySelector('.load-more');
-
-formEl.addEventListener('submit', onSubmit);
-loadBtnEl.addEventListener('click', onLoad);
+let search = 'we';
+// const onSubmitFn = handleSubmit(search);
+// const onLoadFn = handleLoad(search);
+formEl.addEventListener('submit', handleSubmit(search));
+loadBtnEl.addEventListener('click', handleLoad(search));
 
 
 

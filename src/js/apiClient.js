@@ -23,4 +23,3 @@ const getImages = async (search, page) => {
 }
 export { PER_PAGE, getImages };
 
-// mmmmmmmmmm
