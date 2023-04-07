@@ -9,7 +9,7 @@ export default function handleSubmit(e) {
     // new FormData(e.currentTarget).forEach((value, name) => {
     //     data[name] = value;
     // })
-    console.log(data.searchQuery);
+    // console.log(data.searchQuery);
         const { elements: { searchQuery } } = e.currentTarget;
         const search = searchQuery.value.trim();
         refs.loadBtnEl.dataset.page = search;
