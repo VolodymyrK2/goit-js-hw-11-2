@@ -1,9 +1,5 @@
 import axios from 'axios';
-const instance = axios.create({
-  baseURL: 'https://pixabay.com/api/',
-  timeout: 1000,
-  headers: {'X-Custom-Header': 'foobar'}
-});
+
 const PER_PAGE = 40;
 
 const getImages = async (search, page) => {

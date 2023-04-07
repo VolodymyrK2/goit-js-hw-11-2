@@ -1,11 +1,11 @@
 import loadImages from "./loadImages";
-const loadBtnEl = document.querySelector('.load-more');
-export default function handleLoad(search){
-    return onLoad=()=> {
-        loadBtnEl.style.display = 'none';
-        let page = 1;
-        page++;
-        console.log(search);
+import refs from './refs';
+let page = 1;
+export default function handleLoad(){
+        refs.loadBtnEl.style.display = 'none';
+        search = refs.loadBtnEl.dataset.page;
+    console.log(search);
+     page++;
         loadImages(search, page);
+       
     }
-}

@@ -1,5 +1,7 @@
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import refs from './refs';
 export { createCollection, renderImages, clearGallery, informs };
+    
 class Image {
     constructor(webformatURL, largeImageURL, tags, likes, views, comments, downloads) {
         this.webformatURL = webformatURL,
@@ -11,7 +13,7 @@ class Image {
         this.downloads = downloads    
     };
 };
-const galleryEl = document.querySelector('.gallery');
+
 const createCollection = (images) => {
     return images.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) =>
     {
@@ -38,10 +40,10 @@ const renderImages = (collection) => {
         </div>
         </div></a>`
     }).join("");
-    galleryEl.insertAdjacentHTML('beforeend', markup);
+   refs.galleryEl.insertAdjacentHTML('beforeend', markup);
 }
 const clearGallery = () => {
-    galleryEl.innerHTML = '';
+   refs.galleryEl.innerHTML = '';
  }
 function informs(pageState, totalPages,totalHits) {
     if (totalPages === 0) {
